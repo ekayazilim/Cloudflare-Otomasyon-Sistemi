@@ -1,0 +1,230 @@
+/* Genel Stiller */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #f48120;
+    border-color: #f48120;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #e67510;
+    border-color: #e67510;
+}
+
+.btn-secondary {
+    background-color: #2c7cb0;
+    border-color: #2c7cb0;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #226a9c;
+    border-color: #226a9c;
+}
+
+/* Giriş Sayfası */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+}
+
+.login-logo {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #f48120;
+}
+
+/* Ana Sayfa */
+.dashboard-stats {
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #f48120;
+}
+
+.stat-card h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* Domain Listesi */
+.domain-card {
+    margin-bottom: 15px;
+}
+
+.domain-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.domain-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.ssl-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.ssl-off {
+    background-color: #dc3545;
+    color: white;
+}
+
+.ssl-flexible {
+    background-color: #ffc107;
+    color: black;
+}
+
+.ssl-full {
+    background-color: #28a745;
+    color: white;
+}
+
+.ssl-strict {
+    background-color: #007bff;
+    color: white;
+}
+
+/* DNS Kayıtları */
+.dns-table th, .dns-table td {
+    vertical-align: middle;
+}
+
+.dns-type {
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.dns-a {
+    background-color: #007bff;
+    color: white;
+}
+
+.dns-aaaa {
+    background-color: #6610f2;
+    color: white;
+}
+
+.dns-cname {
+    background-color: #28a745;
+    color: white;
+}
+
+.dns-txt {
+    background-color: #fd7e14;
+    color: white;
+}
+
+.dns-mx {
+    background-color: #6f42c1;
+    color: white;
+}
+
+.dns-ns {
+    background-color: #20c997;
+    color: white;
+}
+
+/* Firewall Kuralları */
+.firewall-action {
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.action-allow {
+    background-color: #28a745;
+    color: white;
+}
+
+.action-block {
+    background-color: #dc3545;
+    color: white;
+}
+
+.action-challenge {
+    background-color: #ffc107;
+    color: black;
+}
+
+.action-js_challenge {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Profil Sayfası */
+.profile-card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.profile-header h4 {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .domain-card .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .domain-actions {
+        margin-top: 10px;
+    }
+    
+    .stat-card {
+        margin-bottom: 15px;
+    }
+}
