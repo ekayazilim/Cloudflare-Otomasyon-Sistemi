@@ -1,6 +1,76 @@
 # Cloudflare Otomasyon Sistemi
 
-Bu proje, Cloudflare hesaplarınızı ve domainlerinizi yönetmek için geliştirilmiş kapsamlı bir otomasyon sistemidir. Birden fazla hesap ve domainle çalışan kullanıcılar için toplu işlemleri kolaylaştıran, zaman tasarrufu sağlayan bir araçtır.
+Bu sistem, Cloudflare hesaplarını ve domain yönetimini otomatize etmek için geliştirilmiş bir web uygulamasıdır.
+
+## Kurulum
+
+### Veritabanı Kurulumu
+
+#### Localhost (XAMPP)
+
+1. XAMPP'ı açın ve MySQL servisini başlatın
+2. phpMyAdmin'e giriş yapın (http://localhost/phpmyadmin)
+3. Sol menüden "Yeni" butonuna tıklayarak yeni bir veritabanı oluşturun
+4. Veritabanı adını belirleyin (örn. "cloudflare_otomasyon")
+5. `veritabani.sql` dosyasını içeri aktarmak için:
+   - İçe Aktar sekmesine tıklayın
+   - Dosya Seç butonuyla `veritabani.sql` dosyasını seçin
+   - Sağ alttaki "Git" butonuna tıklayın
+
+#### cPanel
+
+1. cPanel hesabınıza giriş yapın
+2. Veritabanları bölümüne gidin (MySQL Veritabanları)
+3. Yeni bir veritabanı oluşturun
+4. Yeni bir veritabanı kullanıcısı oluşturun ve şifre belirleyin
+5. Kullanıcıya veritabanı için tüm yetkileri verin
+6. phpMyAdmin'e giriş yapın
+7. Oluşturduğunuz veritabanını seçin
+8. İçe Aktar sekmesinden `veritabani.sql` dosyasını yükleyin
+
+#### Plesk
+
+1. Plesk kontrol panelinize giriş yapın
+2. Veritabanları bölümüne gidin
+3. "Veritabanı Ekle" butonuna tıklayın
+4. Veritabanı adını ve kullanıcı bilgilerini girin
+5. phpMyAdmin'e tıklayarak veritabanı yönetim ekranına girin
+6. İçe Aktar sekmesinden `veritabani.sql` dosyasını yükleyin
+
+### Uygulama Ayarları
+
+1. `/config/veritabani.php` dosyasını düzenleyerek veritabanı bağlantı bilgilerinizi güncelleyin
+2. `/config/uygulama.php` dosyasında gerekli ayarlamaları yapın
+
+## Kullanıcı Bilgileri
+
+Varsayılan olarak aşağıdaki bilgilerle giriş yapabilirsiniz:
+
+- **Kullanıcı adı:** admin
+- **Şifre:** ekasunucu@gmail.com
+
+## Yönetim Paneli
+
+- Yönetim paneline `giris.php` sayfasından giriş yapabilirsiniz
+- Yeni yönetici hesabı oluşturmak için:
+  1. `kayit.php` sayfasından kayıt oluşturun
+  2. Veritabanında `kullanicilar` tablosunda ilgili kullanıcının `yetki` alanını `admin` olarak güncelleyin
+
+## Önemli Uyarılar
+
+⚠️ **DİKKAT**:
+
+- Bu sistem, Cloudflare API ile çalışmaktadır. Yapılan işlemler geri alınamaz.
+- Yapılan işlemlerden ve oluşabilecek sorunlardan sistem geliştiricileri sorumlu değildir.
+- Sistem üzerinden gerçekleştirilen tüm işlemlerin sorumluluğu kullanıcıya aittir.
+- Kritik domain ve DNS ayarlarında değişiklik yapmadan önce yedek almanız tavsiye edilir.
+
+## Teknik Gereksinimler
+
+- PHP 7.4 veya üzeri
+- MySQL 5.7 veya üzeri
+- PDO PHP eklentisi
+- cURL PHP eklentisi
 
 ## Özellikler
 
@@ -47,22 +117,6 @@ Bu proje, Cloudflare hesaplarınızı ve domainlerinizi yönetmek için gelişti
 - Cloudflare API v4 entegrasyonu
 - Oturum yönetimi ve güvenlik kontrolleri
 - Temiz kod mimarisi
-
-## Kurulum
-
-1. Dosyaları sunucunuza yükleyin
-2. `config/uygulama.php` dosyasındaki veritabanı bilgilerini kendi sunucunuza göre düzenleyin
-3. Web tarayıcınızda `public/kurulum.php` adresini açarak kurulumu tamamlayın
-4. Admin hesabınızla giriş yapın
-5. Cloudflare API anahtarlarınızı ekleyin ve domainlerinizi senkronize edin
-
-## Gereksinimler
-
-- PHP 7.4 veya daha yeni
-- MySQL 5.7 veya daha yeni
-- PDO PHP eklentisi
-- cURL PHP eklentisi
-- mod_rewrite etkin (Apache için)
 
 ## Ekran Görüntüleri
 
