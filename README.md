@@ -143,6 +143,14 @@ Herhangi bir soru, öneri veya geri bildiriminiz varsa lütfen issue açarak vey
 - E-posta: info@ekayazilim.com.tr
 - Web: [www.ekayazilim.com.tr](https://www.ekayazilim.com.tr)
 - 🌐 [ekasunucu.com](https://www.ekasunucu.com)
+- Telefon & WhatsApp: 0850 307 34 58
+
+## Hizmetlerimiz
+
+- **Hosting İhtiyacınız Varsa:** [Paylaşımlı Hosting Paketleri](https://www.ekasunucu.com/tr/kategori/hosting/paylasimli-hosting)
+- **VPS İhtiyacınız Varsa:** [Türkiye Lokasyon VDS/VPS Çözümleri](https://www.ekasunucu.com/kategori/turkiye-lokasyon-vds-vps)
+- **Domain İhtiyacınız Varsa:** [Domain Kayıt & Transfer Hizmetleri](https://www.ekasunucu.com/domain)
+
 ## Katkıda Bulunma
 
 Projeye katkıda bulunmak için lütfen fork edin ve pull request gönderin. Önerilerinizi ve geri bildirimlerinizi her zaman bekliyoruz. 
